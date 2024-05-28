@@ -73,10 +73,9 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           SizedBox(height: 20,),
           ElevatedButton(
-            
             onPressed: () {
               double imc = _weight / (_height * _height);
-              String message = 'Seu IMC é ${imc.toStringAsFixed(2)}';
+              String message = 'Seu IMC é ${imc.toStringAsFixed(2)}.';
               if (imc < 18.5) {
                 message += '\nVocê está abaixo do peso.';
               } else if (imc < 24.9) {
@@ -90,7 +89,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 context: context,
                 builder: (context) {
                   return AlertDialog(
-                    title: Text('Resultado IMC '),
+                    title: Text('Resultado'),
                     content: Text(message),
                   );
                 },
